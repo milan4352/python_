@@ -2,26 +2,21 @@ import pygame
 import random
 import sys
 
-# Initialize pygame
 pygame.init()
 
-# Screen settings
 width, height = 600, 400
 win = pygame.display.set_mode((width, height))
 pygame.display.set_caption('Snake Game')
 
-# Colors
 black = (0, 0, 0)
 white = (255, 255, 255)
 red = (255, 0, 0)
 green = (0, 255, 0)
 
-# Game settings
 clock = pygame.time.Clock()
 snake_block = 10
 snake_speed = 15
 
-# Font settings
 font_style = pygame.font.SysFont(None, 50)
 
 def message(msg, color):
@@ -38,7 +33,6 @@ def gameLoop():
     snake_List = []
     Length_of_snake = 1
 
-    # Initial food position
     foodx = round(random.randrange(0, width - snake_block) / 10.0) * 10.0
     foody = round(random.randrange(0, height - snake_block) / 10.0) * 10.0
 
